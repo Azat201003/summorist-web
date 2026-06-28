@@ -22,8 +22,7 @@ jobs:
 
       - name: Install ESLint
         run: |
-          bun install eslint@8.10.0
-          bun install @microsoft/eslint-formatter-sarif@3.1.0
+          bun install eslint@10.5.0
 
       - name: Run ESLint
         env:
