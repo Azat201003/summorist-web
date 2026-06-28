@@ -1,7 +1,7 @@
 export default function PeoplePage() {
-    return (
-        <>
-            <h1>People</h1>
-        </>
-    )
+	return (
+		<>
+			<h1>People</h1>
+		</>
+	)
 }
