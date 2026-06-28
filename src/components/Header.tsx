@@ -1,13 +1,17 @@
 
 import { Button, Dropdown, type DropdownItem } from "sketchbook-ui"
-
-const pages : DropdownItem[] = [
-  { label: 'People', onClick: () => console.log('Edit') },
-  { label: 'Gropus', onClick: () => console.log('Duplicate') },
-  { label: 'Mores', onClick: () => console.log('Delete') },
-];
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+    const navigate = useNavigate()
+
+    const pages : DropdownItem[] = [
+        { label: 'People', onClick: () => navigate("/people") },
+        { label: 'Gropus', onClick: () => navigate("/groups") },
+        { label: 'Mores', onClick: () => navigate("/mores") },
+    ];
+
+
     return (
         <nav
             style={{
@@ -22,10 +26,10 @@ export default function Header() {
         >
             <div style={{gap: 10, display: "flex", alignItems: "center"}}>
                 <Dropdown items={pages} triggerIcon='menu'></Dropdown>
-                <Button>Summorist</Button>
+                <Button onClick={() => navigate("/")}>Summorist</Button>
             </div>
             <div style={{gap: 10, display: "flex", alignItems: "center"}}>
-                <Button iconOnly={true}>U</Button>
+                <Button iconOnly={true}>П</Button>
             </div>
         </nav>
     )
