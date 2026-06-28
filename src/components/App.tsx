@@ -1,4 +1,4 @@
-import { Divider, Button, Textarea } from 'sketchbook-ui';
+import { Divider } from 'sketchbook-ui';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import 'sketchbook-ui/style.css';
 import Header from './Header';

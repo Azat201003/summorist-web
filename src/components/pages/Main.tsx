@@ -1,5 +1,3 @@
-import { RoughNotationGroup, RoughNotation } from "react-rough-notation"
-
 export default function MainPage() {
     return (
         <>
