@@ -6,7 +6,7 @@ COPY package.json bun.lock ./
 
 ENV BUN_CONFIG_REGISTRY=https://registry.npmmirror.com
 
-RUN bun install --frozen-lockfile --verbose --production
+RUN bun install --frozen-lockfile --verbose
 
 COPY . .
 RUN bun run build
