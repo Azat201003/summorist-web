@@ -6,6 +6,7 @@ import MainPage from './pages/Main';
 import MoresPage from './pages/Mores';
 import PeoplePage from './pages/People';
 import GroupsPage from './pages/Groups';
+import NotFoundPage from './pages/NotFound';
 
 function App() {
 	const navigate = useNavigate()
@@ -18,6 +19,7 @@ function App() {
 			<Route path="/people" element={<PeoplePage />} />
 			<Route path="/groups" element={<GroupsPage />} />
 			<Route path="/mores" element={<MoresPage navigate={navigate}/>} />
+			<Route path="*" element={<NotFoundPage />} />
 		</Routes>
 	</>
 	);
