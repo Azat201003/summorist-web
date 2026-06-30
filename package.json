@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "react-router-dom": "^7.18.0",
+    "react-router-dom": "^7.18.1",
     "sketchbook-ui": "^1.0.1",
     "summorist-shared": "github:Azat201003/summorist-shared"
   },
@@ -31,7 +31,7 @@
     "eslint-plugin-react-refresh": "^0.5.3",
     "globals": "^17.7.0",
     "typescript": "~6.0.3",
-    "typescript-eslint": "^8.62.0",
-    "vite": "^8.1.0"
+    "typescript-eslint": "^8.62.1",
+    "vite": "^8.1.2"
   }
 }

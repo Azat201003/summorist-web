@@ -18,7 +18,7 @@ export default class MoresPage extends Component<Props, State> {
 	constructor(props: any) {
 		super(props);
 		mores.Mores.GetFiltered({}, (more) => {
-			this.setState({mores: [...this.state.mores, more]});
+			this.setState(prev => ({mores: [...prev.mores, more]}));
 			console.log(more, this.state);
 		}, {pathPrefix: "api"});
 	}
@@ -28,10 +28,11 @@ export default class MoresPage extends Component<Props, State> {
 		const query = formData.get("query");
 
 		this.setState({mores: []} as State);
-		mores.Mores.GetFiltered({title: query?.toString()}, (more) => {
+		console.log(query)
+		mores.Mores.GetFiltered({query: query?.toString()}, (more) => {
 			console.log(this.state);
 			console.log(more);
-			this.setState({mores: [...this.state.mores, more]});
+			this.setState(prev => ({mores: [...prev.mores, more]}));
 			console.log(more, this.state);
 		}, {pathPrefix: "api"});
 	}
